@@ -1,4 +1,4 @@
-package arrayOps;
+package arrayOps.Sorting;
 import java.util.*;
 class bubbleSort{
     public static void main(String args[]){

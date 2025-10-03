@@ -1,4 +1,4 @@
-package arrayOps;
+package arrayOps.Sorting;
 class Bubble_Sort_Recursion{
     public static void main(String args[]){
         int arr [] = infoArray.inputArray(5);

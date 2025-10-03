@@ -1,4 +1,4 @@
-package arrayOps;
+package arrayOps.Sorting;
 class insertionSort{
     public static void main(String args[]){
         int arr[]= infoArray.inputArray(5);

@@ -1,4 +1,4 @@
-package arrayOps;
+package arrayOps.Sorting;
 
 public class Inserstion_Sort_Recursive {
     public static void main(String[] args) {

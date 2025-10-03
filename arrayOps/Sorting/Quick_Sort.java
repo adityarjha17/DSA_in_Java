@@ -1,4 +1,4 @@
-package arrayOps;
+package arrayOps.Sorting;
 
 public class Quick_Sort {
     public static void main(String args[]){
