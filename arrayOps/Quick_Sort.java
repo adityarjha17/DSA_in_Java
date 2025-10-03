@@ -12,6 +12,26 @@ public class Quick_Sort {
         if(low>=high){
             return;
         }
-        
+        int p = partition(arr,low,high);
+        quickSort(arr, low, p-1);
+        quickSort(arr, p+1, high);
+    }
+    static int partition(int arr[], int low, int high){
+        int pivot = arr[low];
+        int i = low;
+        int j = high;
+        while(i<j){
+            while(i<=high && pivot>=arr[i]){
+                i++;
+            }
+            while(j>=low && pivot<arr[j]){
+                j--;
+            }
+            if(i<j){
+            infoArray.swap(arr,i,j);
+            }
+        }
+        infoArray.swap(arr, j, low);
+        return j;
     }
 }
