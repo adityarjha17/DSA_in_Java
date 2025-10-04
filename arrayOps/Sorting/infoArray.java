@@ -1,11 +1,11 @@
 package arrayOps.Sorting;
 
 import java.util.*;
-class infoArray{
+public class infoArray{
     static Scanner sc = new Scanner(System.in);
     public static void main(String args[]){
     }
-    static int[] inputArray(int n){
+    public static int[] inputArray(int n){
         int a[] = new int[n];
         System.out.println("Enter the elements of array:");
         for(int i=0 ; i<n; i++){
