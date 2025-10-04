@@ -13,13 +13,13 @@ public class infoArray{
         }
         return a;
     }
-    static void printValues(int arr[]){
+    public static void printValues(int arr[]){
         System.out.println("Array elements:");
         for(int i:arr){
             System.out.print(i+" ");
         }
     }
-    static void swap(int arr[], int a, int b){
+    public static void swap(int arr[], int a, int b){
         int temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;
