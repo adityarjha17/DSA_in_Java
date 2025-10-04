@@ -1,7 +1,7 @@
 package arrayOps.arrayQs;
 import arrayOps.Sorting.*;
 
-public class secondLargestElement {
+public class secondLargestElements {
     static int secondLargestElement(int arr[]){
         int max=-1,smax=-1;
         for(int i=0;i<arr.length; i++){
