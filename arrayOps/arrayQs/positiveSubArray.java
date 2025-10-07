@@ -1,6 +1,5 @@
-package arrayOps.arrayQs;
-import java.util.*;
-
+package arrayOps.arrayQs;  
+import java.util.*; 
 import arrayOps.Sorting.infoArray;
 public class positiveSubArray {
     public static int longestSubarray_brute(int arr[], int k){
@@ -35,10 +34,31 @@ public class positiveSubArray {
         return msize;
 
     }
+    public static int longestSubarrayHashing(int arr[], int k){
+        Map<Integer, Integer> map =new HashMap<>();
+        int sum =0, maxLen=0;
+        for(int i=0; i<arr.length; i++){
+            sum+=arr[i];
+            
+            if(sum == k ){
+                maxLen= Math.max(maxLen, i+1);
+            }
+            int rem = sum-k;
+            if(map.containsKey(rem)){
+                int len = i - map.get(rem);
+                maxLen = Math.max(maxLen, len);
+            }
+            if(!map.containsKey(sum)){
+                map.put(sum,i);
+            }
+        }
+        return maxLen;
+    }
 
     public static void main(String[] args) {
-        int arr[]= infoArray.inputArray(5);
-        System.out.println("brute"+longestSubarray_brute(arr, 10));
-        System.out.println("op"+longestSubarray(arr, 10));
+        int arr[]= infoArray.inputArray(7);
+        System.out.println("brute "+longestSubarray_brute(arr, 3));
+        System.out.println("op " +longestSubarray(arr, 3));
+        System.out.println("Optimal for +ves and -ves "+longestSubarrayHashing(arr, 3));
     }
 }
