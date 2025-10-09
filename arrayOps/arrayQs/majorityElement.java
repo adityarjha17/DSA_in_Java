@@ -1,7 +1,6 @@
 package arrayOps.arrayQs;
 import arrayOps.Sorting.*;
 import java.util.*;
-import java.util.Map.Entry;
 public class majorityElement {
     public static int majorityElementMap(int arr[]){
         Map<Integer,Integer> map = new HashMap<>();
@@ -16,7 +15,7 @@ public class majorityElement {
         }
         return -1;
     }
-    public static int majorityElement(int arr[]){
+    public static int majorityElementOp(int arr[]){
         int element=-9999, count=0;
         for(int i =0; i< arr.length; i++){
             if(count==0){
@@ -36,6 +35,6 @@ public class majorityElement {
         int arr[]= infoArray.inputArray(5);
         int arr2[]= infoArray.inputArray(5);
         System.out.println( majorityElementMap(arr));
-        System.out.println( majorityElement(arr2));
+        System.out.println( majorityElementOp(arr2));
     }
 }
